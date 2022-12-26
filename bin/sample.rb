@@ -59,7 +59,7 @@ puts
 
 puts "To optimize your bounty completions today, we recommend you do the following activities in this order. Note that some of the bounties can be completed in more than one step."
 
-optimizer.sourced_activity_bounties.each do |activity, sourced_bounties|
+optimizer.ranked_activities_with_bounties.each do |activity, sourced_bounties|
   puts activity.name
   print_shopping_list_for(sourced_bounties)
 end

@@ -26,10 +26,10 @@ class BountyOptimizer
     available_bounties.select(&:universal?).group_by { |bounty| source_of(bounty) }
   end
 
-  def sourced_activity_bounties
-    activities = available_activities.inject({}) do |hash, activity|
-      hash[activity] = sourced_bounties_for(activity)
-      hash
+  def ranked_activities_with_bounties
+    activities = {}
+    @available_activities.each do |activity|
+      activities[activity] = sourced_bounties_for(activity)
     end
 
     activities.sort_by do |activity, sourced_bounties|
