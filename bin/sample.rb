@@ -3,6 +3,24 @@ require_relative '../lib/bounty'
 require_relative '../lib/bounty_optimizer'
 require_relative '../lib/guardian'
 
+def print_shopping_list_for(guardian, bounties)
+  bounties_in_inv = bounties.select { |bounty| guardian.bounties.include?(bounty) }
+  if bounties_in_inv.any?
+    puts "  Already in inventory:"
+    bounties_in_inv.each do |bounty|
+      puts "    - #{bounty.name}"
+    end
+  end
+
+  bounties_to_buy = bounties - bounties_in_inv
+  bounties_to_buy.group_by(&:vendor).each do |vendor, bounties|
+    puts "  Purchase from #{vendor}:"
+    bounties.each do |bounty|
+      puts "    - #{bounty.name}"
+    end
+  end
+end
+
 activities = [
   Activity.new("Vanguard Ops", [:vanguard_ops, :pve, :cabal, :fallen, :vex, :hive]),
   Activity.new("Crucible", [:crucible, :pvp]),
@@ -42,21 +60,14 @@ end
 puts
 
 puts "The following bounties can be done *anywhere*, so we recommend you pick them up regardless of your plans for the day, unless they just don't look fun to you."
-bounties.select(&:universal?).each do |bounty|
-  source = guardian.bounties.include?(bounty) ? "already in inventory" : "purchase from #{bounty.vendor}"
-  puts "  - #{bounty.name} (#{source})"
-end
+print_shopping_list_for(guardian, bounties.select(&:universal?))
 puts
 
 puts "To optimize your bounty completions today, we recommend you do the following activities in this order. Note that some of the bounties can be completed in more than one step."
 
 recommendations.each do |activity, bounties|
   puts activity.name
-  bounties.each do |bounty|
-    next if bounty.universal?
-    source = guardian.bounties.include?(bounty) ? "already in inventory" : "purchase from #{bounty.vendor}"
-    puts "  - #{bounty.name} (#{source})"
-  end
+  print_shopping_list_for(guardian, bounties.reject!(&:universal?))
 end
 
 puts

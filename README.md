@@ -13,44 +13,54 @@ ruby bin/sample.rb
 However, the output is static, so I can save you the trouble. Here's what it prints out:
 
 ```
-Welcome to the sample script, Bountiful Bill! We see that you have these
-bounties already in your inventory:
+Welcome to the sample script, Bountiful Bill! We see that you have these bounties already in your inventory:
   - Kill A Buncha Dregs
   - Kill A Buncha Guardians
   - Get 10 Precision Kills
 
-The following bounties can be done *anywhere*, so we recommend you pick them up
-regardless of your plans for the day, unless they just don't look fun to you.
-  - Get 10 Precision Kills (already in inventory)
-  - Get 8 Kills with a Pulse Rifle (purchase from Banshee)
-  - Get 32.5 Kills with a Rocket Launcher (purchase from Banshee)
+The following bounties can be done *anywhere*, so we recommend you pick them up regardless of your plans for the day, unless they just don't look fun to you.
+  Already in inventory:
+    - Get 10 Precision Kills
+  Purchase from Banshee:
+    - Get 8 Kills with a Pulse Rifle
+    - Get 32.5 Kills with a Rocket Launcher
 
-To optimize your bounty completions today, we recommend you do the following
-activities in this order. Note that some of the bounties can be completed in
-more than one step.
+To optimize your bounty completions today, we recommend you do the following activities in this order. Note that some of the bounties can be completed in more than one step.
 Seraph Shield
-  - Kill A Buncha Dregs (already in inventory)
-  - Pulse Rifle Kills in Seasonal Activities (purchase from Clovis's Torso)
-  - Pick Up Three Seasonal Doodads (purchase from Clovis's Torso)
-  - Taunt A Wizard (purchase from Eris)
-  - Oh My God More Currencies Why (purchase from Clovis's Torso)
-  - Pee On A Hive Knight (purchase from Eris)
+  Already in inventory:
+    - Kill A Buncha Dregs
+  Purchase from Clovis's Torso:
+    - Pulse Rifle Kills in Seasonal Activities
+    - Pick Up Three Seasonal Doodads
+    - Oh My God More Currencies Why
+  Purchase from Eris:
+    - Taunt A Wizard
+    - Pee On A Hive Knight
 Vanguard Ops
-  - Kill A Buncha Dregs (already in inventory)
-  - Sniper Kills In Strikes (purchase from Zavala)
-  - Taunt A Wizard (purchase from Eris)
-  - Pee On A Hive Knight (purchase from Eris)
+  Already in inventory:
+    - Kill A Buncha Dregs
+  Purchase from Zavala:
+    - Sniper Kills In Strikes
+  Purchase from Eris:
+    - Taunt A Wizard
+    - Pee On A Hive Knight
 Crucible
-  - Kill A Buncha Guardians (already in inventory)
-  - Grenade Kills In Crucible (purchase from Shaxx)
-  - Teabag A Streamer (purchase from Twitch)
+  Already in inventory:
+    - Kill A Buncha Guardians
+  Purchase from Shaxx:
+    - Grenade Kills In Crucible
+  Purchase from Twitch:
+    - Teabag A Streamer
 Delivering Cookies
-  - Deliver Eighty Billion Cookies (purchase from Eva)
-  - Ok Now Eighty Billion More Cookies (purchase from Eva)
-  - Win The Great Guardian Bake-Off (purchase from Eva)
+  Purchase from Eva:
+    - Deliver Eighty Billion Cookies
+    - Ok Now Eighty Billion More Cookies
+    - Win The Great Guardian Bake-Off
 Gambit
-  - Kill A Buncha Guardians (already in inventory)
-  - Teabag A Streamer (purchase from Twitch)
+  Already in inventory:
+    - Kill A Buncha Guardians
+  Purchase from Twitch:
+    - Teabag A Streamer
 
 Feel free to skip any you don't care for, of course. Have fun!
 ```
