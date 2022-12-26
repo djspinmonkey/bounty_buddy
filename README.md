@@ -13,19 +13,23 @@ ruby bin/sample.rb
 However, the output is static, so I can save you the trouble. Here's what it prints out:
 
 ```
-Welcome to the sample script, Bountiful Bill! We see that you have these bounties already in your inventory:
+Welcome to the sample script, Bountiful Bill! We see that you have these
+bounties already in your inventory:
   - Kill A Buncha Dregs
   - Kill A Buncha Guardians
   - Get 10 Precision Kills
 
-The following bounties can be done *anywhere*, so we recommend you pick them up regardless of your plans for the day, unless they just don't look fun to you.
+The following bounties can be done *anywhere*, so we recommend you pick them up
+regardless of your plans for the day, unless they just don't look fun to you.
   Already in inventory:
     - Get 10 Precision Kills
   Purchase from Banshee:
     - Get 8 Kills with a Pulse Rifle
     - Get 32.5 Kills with a Rocket Launcher
 
-To optimize your bounty completions today, we recommend you do the following activities in this order. Note that some of the bounties can be completed in more than one step.
+To optimize your bounty completions today, we recommend you do the following
+activities in this order. Note that some of the bounties can be completed in
+more than one step.
 Seraph Shield
   Already in inventory:
     - Kill A Buncha Dregs
