@@ -1,6 +1,7 @@
 require_relative '../lib/activity'
 require_relative '../lib/bounty'
 require_relative '../lib/bounty_optimizer'
+require_relative '../lib/guardian'
 
 activities = [
   Activity.new("Vanguard Ops", [:vanguard_ops, :pve, :cabal, :fallen, :vex, :hive]),
@@ -11,30 +12,44 @@ activities = [
 ]
 
 bounties = [
-  Bounty.new("Kill A Buncha Dregs", [:pve, :fallen]),
-  Bounty.new("Kill A Buncha Guardians", [:pvp]),
-  Bounty.new("Get A Precision Kill", []),
-  Bounty.new("Sniper Kills In Strikes", [:pve, :vanguard_ops]),
-  Bounty.new("Grenade Kills In Crucible", [:pvp, :crucible]),
-  Bounty.new("Teabag A Streamer", [:pvp]),
-  Bounty.new("Deliver Eighty Billion Cookies", [:baking]),
-  Bounty.new("Pulse Rifle Kills in Seasonal Activities", [:pve, :seasonal]),
-  Bounty.new("Pick Up Three Seasonal Doodads", [:seasonal]),
-  Bounty.new("Taunt A Wizard", [:pve, :hive]),
-  Bounty.new("Oh My God More Currencies Why", [:seasonal]),
-  Bounty.new("Ok Now Eighty Billion More Cookies", [:baking]),
-  Bounty.new("Pee On A Hive Knight", [:hive]),
-  Bounty.new("Win The Great Guardian Bake-Off", [:baking]),
+  Bounty.new("Kill A Buncha Dregs", [:pve, :fallen], "Ikora"),
+  Bounty.new("Kill A Buncha Guardians", [:pvp], "Ikora"),
+  Bounty.new("Get 10 Precision Kills", [], "Zavala"),
+  Bounty.new("Get 8 Kills with a Pulse Rifle", [], "Banshee"),
+  Bounty.new("Get 32.5 Kills with a Rocket Launcher", [], "Banshee"),
+  Bounty.new("Sniper Kills In Strikes", [:pve, :vanguard_ops], "Zavala"),
+  Bounty.new("Grenade Kills In Crucible", [:pvp, :crucible], "Shaxx"),
+  Bounty.new("Teabag A Streamer", [:pvp], "Twitch"),
+  Bounty.new("Deliver Eighty Billion Cookies", [:baking], "Eva"),
+  Bounty.new("Pulse Rifle Kills in Seasonal Activities", [:pve, :seasonal], "Clovis's Torso"),
+  Bounty.new("Pick Up Three Seasonal Doodads", [:seasonal], "Clovis's Torso"),
+  Bounty.new("Taunt A Wizard", [:pve, :hive], "Eris"),
+  Bounty.new("Oh My God More Currencies Why", [:seasonal], "Clovis's Torso"),
+  Bounty.new("Ok Now Eighty Billion More Cookies", [:baking], "Eva"),
+  Bounty.new("Pee On A Hive Knight", [:hive], "Eris"),
+  Bounty.new("Win The Great Guardian Bake-Off", [:baking], "Eva"),
 ]
+
+guardian = Guardian.new("Bountiful Bill", bounties.first(3))
 
 optimizer = BountyOptimizer.new(activities, bounties)
 recommendations = optimizer.recommended_activities
 
-puts "We recommend you do the following activities in this order. Note that some of the bounties can be completed in more than one step."
+puts "Welcome to the sample script, #{ guardian.name }! We see that you have these bounties already in your inventory:"
+guardian.bounties.each do |bounty|
+  puts "  - #{bounty.name}"
+end
+puts
+
+puts "To optimize your bounty completions today, we recommend you do the following activities in this order. Note that some of the bounties can be completed in more than one step."
 
 recommendations.each do |activity, bounties|
   puts activity.name
-  bounties.each { |bounty| puts "  - #{bounty.name}" }
+  bounties.each do |bounty|
+    source = guardian.bounties.include?(bounty) ? "already in inventory" : "purchase from #{bounty.vendor}"
+    puts "  - #{bounty.name} (#{source})"
+  end
 end
 
+puts
 puts "Feel free to skip any you don't care for, of course. Have fun!"
