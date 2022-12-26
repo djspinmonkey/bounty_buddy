@@ -41,11 +41,19 @@ guardian.bounties.each do |bounty|
 end
 puts
 
+puts "The following bounties can be done *anywhere*, so we recommend you pick them up regardless of your plans for the day, unless they just don't look fun to you."
+bounties.select(&:universal?).each do |bounty|
+  source = guardian.bounties.include?(bounty) ? "already in inventory" : "purchase from #{bounty.vendor}"
+  puts "  - #{bounty.name} (#{source})"
+end
+puts
+
 puts "To optimize your bounty completions today, we recommend you do the following activities in this order. Note that some of the bounties can be completed in more than one step."
 
 recommendations.each do |activity, bounties|
   puts activity.name
   bounties.each do |bounty|
+    next if bounty.universal?
     source = guardian.bounties.include?(bounty) ? "already in inventory" : "purchase from #{bounty.vendor}"
     puts "  - #{bounty.name} (#{source})"
   end
