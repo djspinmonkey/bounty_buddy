@@ -1,0 +1,60 @@
+Vanguard Ops:
+  best_for:
+    - vanguard_ops
+    - weapon
+    - pve
+  can_also:
+    - cabal
+    - vex
+    - hive
+    - fallen
+    - taken
+  repeatable_bounty_vendor: Zavala
+Crucible (Quickplay):
+  best_for:
+    - pvp
+    - control
+    - clash
+  can_also:
+    - weapon
+  repeatable_bounty_vendor: Shaxx
+Trials of Osiris:
+  best_for:
+    - pvp
+    - trials
+  can_also:
+    - weapon
+  repeatable_bounty_vendor: Saint-14
+Gambit:
+  best_for:
+    - pve
+    - gambit
+  can_also:
+    - pvp
+    - weapon
+    - cabal
+    - fallen
+    - taken
+    - hive
+    - vex
+  repeatable_bounty_vendor: The Drifter
+Seraph Shield:
+  best_for:
+    - pve
+    - fallen
+    - hive
+    - seraph_seasonal
+  can_also:
+    - weapon
+Heists:
+  best_for:
+    - pve
+    - seraph_seasonal
+  can_also:
+    - weapon
+    - cabal
+    - fallen
+    - taken
+    - hive
+    - vex
+  repeatable_bounty_vendor: Rasputin's Torso

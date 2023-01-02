@@ -15,47 +15,79 @@ However, the output is static, so I can save you the trouble. Here's what it pri
 ```
 Welcome to the sample script, Bountiful Bill! We see that you have these
 bounties already in your inventory:
-  - Kill A Buncha Dregs
-  - Kill A Buncha Guardians
-  - Kill 10 Combatants With Solar Abilities
+  - In the Zone
+  - Power Up
+  - The Nothing
 
 The following bounties can be done *anywhere*, so we recommend you pick them up
 regardless of your plans for the day, unless they just don't look fun to you.
-  - Get 10 Precision Kills (purchase from Zavala)
-  - Get 8 Kills with a Pulse Rifle (purchase from Banshee)
-  - Get 32.5 Kills with a Rocket Launcher (purchase from Banshee)
+  - Stasis Calibration (purchase from Banshee-44)
+  - Linear Fusion Rifle Calibration (purchase from Banshee-44)
+  - Fusion Rifle Calibration (purchase from Banshee-44)
+  - Trace Rifle Calibration (purchase from Banshee-44)
+  - Seraph Stasis (purchase from Rasputin's Torso)
+  - Seraph Front-Liner (purchase from Rasputin's Torso)
 
 To optimize your bounty completions today, we recommend you do the following
 activities in this order. Note that some of the bounties can be completed in
-more than one step.
-Seraph Shield
-  - Kill A Buncha Dregs (already in inventory)
-  - Kill 10 Combatants With Solar Abilities (already in inventory)
-  - Kill 100 Combatants in Seasonal Activities (purchase from Clovis's Torso)
-  - Pick Up Three Seasonal Doodads (purchase from Clovis's Torso)
-  - Oh My God More Currencies Why (purchase from Clovis's Torso)
-  - Taunt A Wizard (purchase from Eris)
-  - Pee On A Hive Knight (purchase from Eris)
-Vanguard Ops
-  - Kill A Buncha Dregs (already in inventory)
-  - Kill 10 Combatants With Solar Abilities (already in inventory)
-  - Sniper Kills In Strikes (purchase from Zavala)
-  - Taunt A Wizard (purchase from Eris)
-  - Pee On A Hive Knight (purchase from Eris)
-Crucible
-  - Kill A Buncha Guardians (already in inventory)
-  - Grenade Kills In Crucible (purchase from Shaxx)
-  - Teabag A Streamer (purchase from Twitch)
-Gambit
-  - Kill A Buncha Guardians (already in inventory)
-  - Kill 10 Combatants With Solar Abilities (already in inventory)
-  - Teabag A Streamer (purchase from Twitch)
-Delivering Cookies
-  - Deliver Eighty Billion Cookies (purchase from Eva)
-  - Ok Now Eighty Billion More Cookies (purchase from Eva)
-  - Win The Great Guardian Bake-Off (purchase from Eva)
+more than one step. The 'efficiency' is based on how many bounties are
+available for that activity, and how easily they can be completed there. For
+example, Vangaurd Ops is great for weapon bounties, but you might not want to
+take an unfamiliar loadout into Trials.
+Vanguard Ops (efficiency: 22)
+  - Rocketing to Prominence (purchase from Zavala)
+  - Long Distance Plan (purchase from Zavala)
+  - Stasis Calibration (purchase from Banshee-44)
+  - Linear Fusion Rifle Calibration (purchase from Banshee-44)
+  - Fusion Rifle Calibration (purchase from Banshee-44)
+  - Trace Rifle Calibration (purchase from Banshee-44)
+  - Seraph Spellbreaker (purchase from Rasputin's Torso)
+  - Seraph Front-Liner (purchase from Rasputin's Torso)
+Crucible (Quickplay) (efficiency: 18)
+  - In the Zone (already in inventory)
+  - Power Up (already in inventory)
+  - The Nothing (already in inventory)
+  - Coordinated Fire (purchase from Shaxx)
+  - Stasis Calibration (purchase from Banshee-44)
+  - Linear Fusion Rifle Calibration (purchase from Banshee-44)
+  - Fusion Rifle Calibration (purchase from Banshee-44)
+  - Trace Rifle Calibration (purchase from Banshee-44)
+  - Seraph Front-Liner (purchase from Rasputin's Torso)
+Trials of Osiris (efficiency: 15)
+  - Power Up (already in inventory)
+  - The Nothing (already in inventory)
+  - Coordinated Fire (purchase from Shaxx)
+  - Stasis Calibration (purchase from Banshee-44)
+  - Linear Fusion Rifle Calibration (purchase from Banshee-44)
+  - Fusion Rifle Calibration (purchase from Banshee-44)
+  - Trace Rifle Calibration (purchase from Banshee-44)
+  - Seraph Front-Liner (purchase from Rasputin's Torso)
+Seraph Shield (efficiency: 11)
+  - Stasis Calibration (purchase from Banshee-44)
+  - Linear Fusion Rifle Calibration (purchase from Banshee-44)
+  - Fusion Rifle Calibration (purchase from Banshee-44)
+  - Trace Rifle Calibration (purchase from Banshee-44)
+  - Seraph Spellbreaker (purchase from Rasputin's Torso)
+  - Seraph Front-Liner (purchase from Rasputin's Torso)
+Gambit (efficiency: 10)
+  - Power Up (already in inventory)
+  - The Nothing (already in inventory)
+  - Coordinated Fire (purchase from Shaxx)
+  - Stasis Calibration (purchase from Banshee-44)
+  - Linear Fusion Rifle Calibration (purchase from Banshee-44)
+  - Fusion Rifle Calibration (purchase from Banshee-44)
+  - Trace Rifle Calibration (purchase from Banshee-44)
+  - Seraph Spellbreaker (purchase from Rasputin's Torso)
+  - Seraph Front-Liner (purchase from Rasputin's Torso)
+Heists (efficiency: 8)
+  - Stasis Calibration (purchase from Banshee-44)
+  - Linear Fusion Rifle Calibration (purchase from Banshee-44)
+  - Fusion Rifle Calibration (purchase from Banshee-44)
+  - Trace Rifle Calibration (purchase from Banshee-44)
+  - Seraph Spellbreaker (purchase from Rasputin's Torso)
+  - Seraph Front-Liner (purchase from Rasputin's Torso)
 
-Feel free to skip any you don't care for, of course. Have fun!
+Feel free to skip any you don't care for, of course, and have fun!
 ```
 
 The idea is that roughly this information could be kept open on a web page or

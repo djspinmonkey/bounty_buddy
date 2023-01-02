@@ -1,0 +1,50 @@
+Shaxx:
+  In the Zone:
+    tag: control
+  Power Up:
+    tag: pvp
+  The Nothing:
+    tag: pvp
+    damage: void
+  Coordinated Fire:
+    tag: pvp
+Zavala:
+  Rocketing to Prominence:
+    tag: vanguard_ops
+    weapons: rocket_launcher
+  Long Distance Plan:
+    tag: vanguard_ops
+    weapons: sniper
+  One Shot, One Kill:
+  Horseshoes and Hand Grenades:
+Banshee-44:
+  Stasis Calibration:
+    tag: weapon
+    damage: stasis
+  Linear Fusion Rifle Calibration:
+    tag: weapon
+    weapon: linear_fusion_rifle
+  Fusion Rifle Calibration:
+    tag: weapon
+    weapon: fusion_rifle
+  Trace Rifle Calibration:
+    tag: weapon
+    weapon: trace_rifle
+Rasputin's Torso:
+  Seraph Spellbreaker:
+    tag: hive
+    bonus: seraph_seasonal
+  Seraph Heavy Arms:
+    bonus:
+      - pvp
+      - seraph_seasonal
+  Seraph Stasis:
+    tag: element
+    bonus:
+      - pvp
+      - seraph_seasonal
+  Seraph Front-Liner:
+    tag: weapon
+    bonus:
+      - pvp
+      - seraph_seasonal

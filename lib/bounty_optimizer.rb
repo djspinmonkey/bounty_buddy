@@ -18,7 +18,7 @@ class BountyOptimizer
   def sourced_bounties_for(activity)
     @available_bounties
       .reject(&:universal?)
-      .select { |bounty| activity.completes?(bounty) }
+      .select { |bounty| activity.best_for?(bounty) }
       .group_by { |bounty| source_of(bounty) }
   end
 
@@ -26,15 +26,48 @@ class BountyOptimizer
     available_bounties.select(&:universal?).group_by { |bounty| source_of(bounty) }
   end
 
+  # Returns a hash with the following structure:
+  #
+  #   {
+  #     some_activity => {
+  #       efficiency: 10,
+  #       bounties: {
+  #         inventory: [some_bounty, another_bounty],
+  #         "A Vendor": [yet_another_bounty]
+  #       }
+  #     },
+  #     a_lesser_activity => {
+  #       efficiency: 3,
+  #       bounties: {
+  #         "Another Vendor": [just_one_bounty]
+  #       }
+  #     }
+  #   }
+  #
+  # The list of bounties includes only non-universal bounties - they may apply
+  # to other activities as well, but not _all_ activities. This efficiency
+  # metric takes into account the number of bounties completable in an
+  # activity, which activities are best for which types of bounties, and
+  # whether the bounties give bonus progress in certain types of activities.
+  # The hash will be sorted by the efficiency score, with the highest scoring
+  # activities first.
+  #
   def ranked_activities_with_bounties
-    activities = {}
-    @available_activities.each do |activity|
-      activities[activity] = sourced_bounties_for(activity)
+    ranked_activities = {}
+
+    available_activities.each do |activity|
+      efficiency = 0
+      bounties = Hash.new { |h,k| h[k] = [] }
+      available_bounties.each do |bounty|
+        next unless activity.completes?(bounty)
+        efficiency += bounty.efficiency(activity)
+        bounties[source_of(bounty)] << bounty
+      end
+
+      ranked_activities[activity] = { efficiency: efficiency, bounties: bounties }
     end
 
-    activities.sort_by do |activity, sourced_bounties|
-      -sourced_bounties.values.map(&:length).sum
-    end.to_h
+    ranked_activities.sort_by { |activity, attrs| -attrs[:efficiency] }
   end
 
 end
